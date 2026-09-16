@@ -342,7 +342,7 @@ class MainActivity : AppCompatActivity() {
             try {
                 val videoUrl = when {
                     url.contains("youtube.com") || url.contains("youtu.be") -> YouTubeUrlFetcher.fetchYouTubeVideoUrl(url)
-                    url.contains("twitter.com") -> TwitterUrlFetcher.fetchTwitterVideoUrl(url)
+                    url.contains("twitter.com") || url.contains("x.com") -> TwitterUrlFetcher.fetchTwitterVideoUrl(url)
                     url.contains("instagram.com") -> InstagramUrlFetcher.fetchInstagramVideoUrl(url)
                     url.contains("facebook.com") -> FacebookUrlFetcher.fetchFacebookVideoUrl(url)
                     else -> YouTubeUrlFetcher.fetchYouTubeVideoUrl(url)
